@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+Calculator
+</title>
+<style>
+ #clear{
+ width : 50px;
+ }
+</style>
+<script>	
+	function fun(valueRecieve){
+	   document.getElementById("demo").innerHTML += valueRecieve
+		
+		
+	}
+	function Answer(){
+         let x = document.getElementById("demo").innerHTML   
+		 let y = eval(x);
+		 document.getElementById("demo").innerHTML=y;
+	}
+	function clr()
+         {
+             document.getElementById("demo").innerHTML=" ";
+         }
+</script>	
+</head>
+<body>
+<div class="formstyle">
+<p id="demo"></p>
+<form name="form">
+	
+	<br> </br>
+    <input type = "button" value="C" onclick= "clr()" > 
+	<input type = "button" value="(" onclick="fun('(')">
+	<input type = "button" value="%" onclick="fun('%')">
+	<input type = "button" value="/" onclick="fun('/')"">
+	<br>  </br>
+	<input type = "button" value="7" onclick="fun(7)"">
+	<input type = "button" value="8" onclick="fun(8)"">
+	<input type = "button" value="9" onclick="fun(9)">
+	<input type = "button" value="*" onclick="fun('*')">
+	<br>  </br>
+	<input type = "button" value="4" onclick="fun(4)">
+	<input type = "button" value="5" onclick="fun(5)">
+	<input type = "button" value="6" onclick="fun(6)">
+	<input type = "button" value="-" onclick="fun('-')">
+	<br>  </br>
+	<input type = "button" value="1" onclick="fun(1)">
+	<input type = "button" value="2" onclick="fun(2)">
+	<input type = "button" value="3" onclick="fun(3)">
+	<input type = "button" value="+" onclick="fun('+')">
+	<br>  </br>
+	<input type = "button" value="/" onclick="fun(/)">
+	<input type = "button" value="0" onclick="fun(0)">
+	<input type = "button" value="." onclick="fun(.)">
+	<input type = "button" value="=" onclick="Answer()">
+	
+	</form>
+	</div>	   
+</body>
+</html>
